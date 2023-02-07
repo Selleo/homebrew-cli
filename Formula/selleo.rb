@@ -5,21 +5,21 @@
 class Selleo < Formula
   desc "Selleo's CLI for better developer experience."
   homepage "https://github.com/selleo/cli"
-  version "0.13.0"
+  version "0.14.0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/Selleo/cli/releases/download/v0.13.0/cli_0.13.0_darwin_arm64.tar.gz"
-      sha256 "3b49a49621cc8401dbdc77f88fafc3c2b537ddf84b8e55a65166f69d944bc99d"
+    if Hardware::CPU.intel?
+      url "https://github.com/Selleo/cli/releases/download/v0.14.0/cli_0.14.0_darwin_amd64.tar.gz"
+      sha256 "ea5b5432f699af6b9ff788b9b91af0d31f4b54bd3eb829732f328a5eb0fc2146"
 
       def install
         bin.install "selleo"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/Selleo/cli/releases/download/v0.13.0/cli_0.13.0_darwin_amd64.tar.gz"
-      sha256 "952b08d5366eae9ecca7a5831d5394c99662914f60f253bfc756487400e830b0"
+    if Hardware::CPU.arm?
+      url "https://github.com/Selleo/cli/releases/download/v0.14.0/cli_0.14.0_darwin_arm64.tar.gz"
+      sha256 "6b04aa487e60b5dde7f458a36bd85457e2361f685f4f276fee182ad756b610c5"
 
       def install
         bin.install "selleo"
@@ -29,8 +29,8 @@ class Selleo < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/Selleo/cli/releases/download/v0.13.0/cli_0.13.0_linux_amd64.tar.gz"
-      sha256 "c41e89b577fde9323faa17733442e71ac0102e4c74b771f01af08b8e9ad21544"
+      url "https://github.com/Selleo/cli/releases/download/v0.14.0/cli_0.14.0_linux_amd64.tar.gz"
+      sha256 "7c51a0d67e3d04b04d68f27080462cf373ba17c2c801dea4d04c69e587aa82b2"
 
       def install
         bin.install "selleo"
